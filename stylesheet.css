@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    
+--Very-dark-blue : hsl(233, 47%, 7%);
+--Dark-desaturated-blue: hsl(244, 38%, 16%);
+--Soft-violet: hsl(277, 64%, 61%);
+
+--White: hsl(0, 0%, 100%);
+--Slightly-transparent-white : hsla(0, 0%, 100%, 0.75);
+--Slightly-transparent-white : hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    background-color: var(--Very-dark-blue);
+    height: 110vh;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+}
+
+@media only screen and (max-width:1440px) and (min-width:375px){
+    .container{
+        width: 1058px;
+        height: 437px;
+        background-color: var(--Dark-desaturated-blue);
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows:  38% 24% 21% 17%;
+        position: relative;
+    }
+    .container img {
+        grid-column: 2;
+        width: calc(1058px / 2);
+    }
+
+    .container::after {
+        content: '';
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        background-color:  var(--Soft-violet);
+        top: 0;
+        right: 0;
+        opacity: 0.6;
+    }
+
+    .container h1 {
+        grid-row: 1;
+        color: var(--White);
+        font-family: "Inter", sans-serif;
+        padding-top: 60px;
+        padding-left: 69px;
+        padding-right: 50px;
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+    .container span{
+        color: var(--Soft-violet);
+    }
+
+    .container p{
+        grid-row: 2;
+        padding-left: 69px;
+        color: var(--Slightly-transparent-white);
+        font-size: 13px;
+        font-family: "Lexend Deca", sans-serif;
+        padding-right: 140px;
+        font-weight: 400;
+        line-height: 23px;
+        padding-top: 12px;
+    }
+
+    .container h3 {
+        grid-row: 3;
+        color: var(--White);
+        font-family: "Inter", sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        padding-top: 60px;
+        padding-left: 69px;
+        word-spacing: 73px;
+    }
+
+    .container .second-p {
+        grid-row: 4;
+        padding-left: 69px;
+        color: var(--Slightly-transparent-white);
+        font-size: 13px;
+        font-family: "Lexend Deca", sans-serif;
+        padding-right: 140px;
+        font-weight: 400;
+        padding-top: 0px;
+        text-transform: uppercase;
+        word-spacing: 46px;
+    }
+}
+
+@media  only screen and (max-width: 374px){
+    .container{
+        width: 90%;
+        height: 89%;
+        background-color: var(--Dark-desaturated-blue);
+        display: grid;
+        grid-template-rows: 29% 19% 19% 33%;
+        position: relative;
+    }
+    .container img {
+        grid-row: 1;
+        width: 100%;
+        height: 101%;
+    }
+
+    .container::after {
+        content: '';
+        width: 100%;
+        height: 29.5%;
+        position: absolute;
+        background-color:  var(--Soft-violet);
+        top: 0;
+        right: 0;
+        opacity: 0.6;
+    }
+
+    .container h1 {
+        grid-row: 2;
+        color: var(--White);
+        font-family: "Inter", sans-serif;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 50px;
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .container span{
+        color: var(--Soft-violet);
+    }
+
+    .container p{
+        grid-row: 3;
+        padding-left: 69px;
+        color: var(--Slightly-transparent-white);
+        font-size: 14px;
+        font-family: "Lexend Deca", sans-serif;
+        font-weight: 400;
+        line-height: 23px;
+        padding-top: 16px;
+        padding-left: 30px;
+        padding-right: 50px;
+        text-align: center;
+    }
+
+    .container h3 {
+        grid-row: 4;
+        color: var(--White);
+        font-family: "Inter", sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        word-spacing: 241px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 68px;
+    }
+
+    .container .second-p {
+        position: absolute;
+        bottom: 0px;
+        color: var(--Slightly-transparent-white);
+        font-size: 11px;
+        font-family: "Lexend Deca", sans-serif;
+        padding-right: 137px;
+        font-weight: 400;
+        text-transform: uppercase;
+        word-spacing: 46px;
+        left: 94px;
+        line-height: 68px;
+    }
+
+}
